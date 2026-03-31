@@ -19,7 +19,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--provider", choices=["ollama", "openrouter"], default="ollama")
     parser.add_argument("--model-name", default="qwen2.5:7b-instruct")
     parser.add_argument("--temperature", type=float, default=0.0)
-    parser.add_argument("--max-tokens", type=int, default=256)
+    parser.add_argument("--max-tokens", type=int, default=8192)
     parser.add_argument("--top-k-retrieve", type=int, default=10)
     parser.add_argument("--top-k-after-rerank", type=int, default=5)
     parser.add_argument("--alpha", type=float, default=0.5)

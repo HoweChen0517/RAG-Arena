@@ -23,3 +23,6 @@ hotpot_qa/
 *.nbconvert.ipynb
 .vscode/
 .idea/
+
+# api keys
+api_keys.json
