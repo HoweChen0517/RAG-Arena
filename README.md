@@ -20,6 +20,15 @@ It is designed to compare retrieval, reranking, and generation choices across mu
 uv sync
 ```
 
+## Prepare Data
+
+Refer to [framolfese/2WikiMultihopQA](https://huggingface.co/datasets/framolfese/2WikiMultihopQA) and [hotpotqa/hotpot_qa](https://huggingface.co/datasets/hotpotqa/hotpot_qa) and clone directly into the root dir.
+
+```bash
+git clone https://huggingface.co/datasets/framolfese/2WikiMultihopQA
+git clone https://huggingface.co/datasets/hotpotqa/hotpot_qa
+```
+
 ## Run
 
 ```bash
@@ -29,3 +38,4 @@ uv run rag-arena \
   --rerank-config '{"enabled":true,"model_name":"cross-encoder/ms-marco-MiniLM-L-6-v2","top_k":5}' \
   --generation-config '{"provider":"ollama","model_name":"qwen2.5:7b-instruct","temperature":0.0,"max_tokens":8192}'
 ```
+or use the notebook to run experiment iteratively.
